@@ -57,6 +57,7 @@ export default function Hero() {
 const futureEmployee = {
     name: 'Joshua Keane Thompson',
     title: 'Full-Stack Developer | Problem Solver 
+    | Front-end/Design focused
     | Collaborative contributer',
     skills: [
         'ReactJS', 'NextJS', 'Redux', 'TypeScript',
