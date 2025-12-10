@@ -2,42 +2,31 @@ import React from "react";
 
 const AnimatedGrid = () => {
   return (
-    <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      <div className="relative w-full h-full">
-        {/* Grid Container */}
-        <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]">
-          {/* Horizontal Lines */}
-          <div className="absolute inset-0 grid grid-cols-[repeat(40,1fr)] opacity-20">
-            {[...Array(40)].map((_, i) => (
-              <div
-                key={`v-${i}`}
-                className="relative h-full w-full border-r border-blue-500/10"
-                style={{
-                  animation: `gridPulse ${
-                    2 + Math.random() * 2
-                  }s ease-in-out infinite`,
-                  animationDelay: `${Math.random() * 2}s`,
-                }}
-              />
-            ))}
-          </div>
-
-          {/* Vertical Lines */}
-          <div className="absolute inset-0 grid grid-rows-[repeat(40,1fr)] opacity-20">
-            {[...Array(40)].map((_, i) => (
-              <div
-                key={`h-${i}`}
-                className="relative w-full h-full border-b border-blue-500/10"
-                style={{
-                  animation: `gridPulse ${
-                    2 + Math.random() * 2
-                  }s ease-in-out infinite`,
-                  animationDelay: `${Math.random() * 2}s`,
-                }}
-              />
-            ))}
-          </div>
-        </div>
+    <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-20">
+      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_at_center,transparent_0%,black)]">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="100%"
+          height="100%"
+          className="absolute inset-0"
+        >
+          <pattern
+            id="grid"
+            width="40"
+            height="40"
+            patternUnits="userSpaceOnUse"
+          >
+            <rect
+              width="40"
+              height="40"
+              fill="none"
+              stroke="white"
+              strokeWidth="0.5"
+              className="opacity-40 animate-gridPulse"
+            />
+          </pattern>
+          <rect width="100%" height="100%" fill="url(#grid)" />
+        </svg>
       </div>
     </div>
   );

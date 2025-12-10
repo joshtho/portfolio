@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Send, Phone, MapPin, Mail } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
+import AnimatedGrid from "@/components/AnimatedGrid";
 export default function Contact() {
    return (
     
@@ -10,6 +10,7 @@ export default function Contact() {
  text-white min-h-screen"
     >
       <section className="min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8">
+        <AnimatedGrid />
         <div className="container mx-auto max-w-2xl">
           <div className="gap-12 items-center">
             {/* Contact Info */}

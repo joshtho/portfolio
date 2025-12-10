@@ -149,12 +149,11 @@ const futureEmployee = {
     <>
       <main className="bg-[#020617] text-white min-h-screen">
         <section
-          className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 py-10 md:py-16 lg:py-0 hero-section-padding"
+          className="hero min-h-screen flex items-center justify-center relative px-4 sm:px-6 lg:px-8 pt-24 py-10 md:py-16 lg:py-0 hero-section-padding"
           style={{ paddingTop: "var(--hero-padding-top, 0)" }}
         >
           <div className="absolute inset-0"></div>
 
-          {/* Choose one of these background options */}
           <GridBackground />
           {/* Meteors Effect */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -163,7 +162,7 @@ const futureEmployee = {
 
           {/* Main content container */}
           <div
-            className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28"
+            className="container mx-auto flex flex-col lg:flex-row items-center justify-between relative z-10 pt-20 py-8 md:py-10 lg:py-12 md:pt-28 xl:pt-28"
             style={{
               paddingTop:
                 window.innerWidth >= 1360 &&

@@ -2,49 +2,70 @@ import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
+import { SiTypescript, SiTailwindcss } from "react-icons/si";
+import { Badge } from "@/components/ui/badge";
 
 const projects = [
   {
-    title: "Olova! A Lightweight JavaScript Library",
+    title: "Gala",
     description:
-      "A lightweight JavaScript library for creating beautiful, responsive UI components.",
-    src: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
+      "Web application that lets a user save data on their favorite artists and their artworks. Created a ReactJS frontend with React-router-dom v6 to have seamless client-side navigation. Implemented Redux toolkit for state management and fetch calls to deliver better communication between components. Generated Ruby on Rails database with ActiveRecord and SQLite for an API with BCrypt for security.",
+    link: "/Gala.png",
     color: "#5196fd",
-    githubLink: "https://github.com/olovajs/olova",
-    liveLink: "https://olova.js.org/",
+    githubLink: "https://github.com/joshtho/Gala",
+    liveLink: "https://youtu.be/prBWNAV13sY",
+    stack: [{
+          name: "TypeScript",
+          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+        }]
   },
   {
-    title: "A sleek portfolio built with React and Tailwind CSS ",
+    title: "We Stay",
     description:
-      "A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
-    src: "tree.jpg",
-    link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
+      "A vacation application where users can save their favorite short-term rentals and plan their trips. Built with ReactJS for a dynamic frontend experience and integrated with a backend API for data management.",
+    link: "/WeStay.png",
     color: "#8f89ff",
-    githubLink: "https://github.com/seraprogrammer/portfolio",
-    liveLink: "https://codervai.vercel.app",
+    githubLink: "https://github.com/joshtho/WeStay",
+    liveLink: "https://youtu.be/nuQ-BWluMl4",
+    stack: []
   },
   {
-    title: "🚀 CodeWhisperer",
+    title: "Ugli Boats",
     description:
-      "🚀 CodeWhisperer A powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "water.jpg",
-    link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
+      "Ugli Boats is a platform that allows users to explore and book boat trips. Built with a focus on user experience and seamless navigation. Note: Design was under full control of client",
+    link: "/Ugliboats.png",
     color: "#fff",
-    githubLink: "https://github.com/seraprogrammer/codewhisperer",
-    liveLink: "https://codewhisperer.vercel.app/",
+    githubLink: "https://github.com/joshtho/ugli-boats-v2",
+    liveLink: "https://ugliboats.com",
+    stack: []
   },
   {
-    title: "CodeKori 🔥",
+    title: "Checkoutden.com",
     description:
-      "CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
+      "Checkoutden an e-commerce platform that allows clients of mine to host a checkout page for their digital products and manage their sales efficiently. Note: Still in development.",
     src: "house.jpg",
-    link: "https://i.postimg.cc/cHQr4fpR/Annotation-2025-04-01-205350.png",
+    link: "/Checkoutden.png",
     color: "#ed649e",
-    githubLink: "https://github.com/seraprogrammer/CodeKori",
-    liveLink: "https://codekori.js.org",
+    githubLink: "https://github.com/joshtho/living-rivers",
+    liveLink: "https://checkoutden.com",
+    stack: []
   },
 ];
+
+const skills = [
+        {
+          name: "TypeScript",
+          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
+        },
+        {
+          name: "Tailwind CSS",
+          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+        },
+      ]
 
 export default function Projects() {
   const container = useRef(null);
@@ -116,6 +137,7 @@ export default function Projects() {
                 targetScale={targetScale}
                 githubLink={project.githubLink}
                 liveLink={project.liveLink}
+                stack={project.stack}
               />
             );
           })}
@@ -136,6 +158,7 @@ function Card({
   targetScale,
   githubLink,
   liveLink,
+  stack
 }) {
   const container = useRef(null);
   const scale = useTransform(progress, range, [1, targetScale]);
@@ -194,7 +217,21 @@ function Card({
                   className="w-2 h-2 md:w-3 md:h-3 rounded-full"
                   style={{ backgroundColor: color }}
                 />
-                <div className="h-[1px] w-12 md:w-20 bg-gray-600" />
+                <div className="flex flex-wrap gap-2">
+        {stack.map((item, index) => (
+          <Badge
+            key={index}
+            variant="outline"
+            className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
+          >
+            <span className="transform group-hover/badge:scale-110 transition-transform duration-300">
+              {item.icon}
+            </span>
+            <span className="font-medium">{item.name}</span>
+          </Badge>
+        ))}
+      </div>
+                {/* <div className="h-[1px] w-12 md:w-20 bg-gray-600" /> */}
               </div>
 
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4">
@@ -267,7 +304,7 @@ function Card({
                     className="text-xs md:text-sm font-medium"
                     style={{ color }}
                   >
-                    Live
+                    {liveLink.includes('youtu') ? 'Video Demo' : 'Live'}
                   </span>
                 </motion.a>
               </div>
