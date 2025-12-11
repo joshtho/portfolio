@@ -10,7 +10,7 @@ const projects = [
     title: "Gala",
     description:
       "Web application that lets a user save data on their favorite artists and their artworks. Created a ReactJS frontend with React-router-dom v6 to have seamless client-side navigation. Implemented Redux toolkit for state management and fetch calls to deliver better communication between components. Generated Ruby on Rails database with ActiveRecord and SQLite for an API with BCrypt for security.",
-    link: "/Gala.png",
+    link: `${import.meta.env.BASE_URL}Gala.png`,
     color: "#5196fd",
     githubLink: "https://github.com/joshtho/Gala",
     liveLink: "https://youtu.be/prBWNAV13sY",
@@ -27,7 +27,7 @@ const projects = [
     title: "We Stay",
     description:
       "A vacation application where users can save their favorite short-term rentals and plan their trips. Built with ReactJS for a dynamic frontend experience and integrated with a backend API for data management.",
-    link: "/WeStay.png",
+    link: `${import.meta.env.BASE_URL}WeStay.png`,
     color: "#8f89ff",
     githubLink: "https://github.com/joshtho/WeStay",
     liveLink: "https://youtu.be/nuQ-BWluMl4",
@@ -37,7 +37,7 @@ const projects = [
     title: "Ugli Boats",
     description:
       "Ugli Boats is a platform that allows users to explore and book boat trips. Built with a focus on user experience and seamless navigation. Note: Design was under full control of client",
-    link: "/Ugliboats.png",
+    link: `${import.meta.env.BASE_URL}Ugliboats.png`,
     color: "#fff",
     githubLink: "https://github.com/joshtho/ugli-boats-v2",
     liveLink: "https://ugliboats.com",
@@ -48,7 +48,7 @@ const projects = [
     description:
       "Checkoutden an e-commerce platform that allows clients of mine to host a checkout page for their digital products and manage their sales efficiently. Note: Still in development.",
     src: "house.jpg",
-    link: "/Checkoutden.png",
+    link: `${import.meta.env.BASE_URL}Checkoutden.png`,
     color: "#ed649e",
     githubLink: "https://github.com/joshtho/living-rivers",
     liveLink: "https://checkoutden.com",
