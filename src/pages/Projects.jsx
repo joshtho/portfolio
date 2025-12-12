@@ -2,46 +2,47 @@ import { ReactLenis } from "lenis/react";
 import { useTransform, motion, useScroll } from "framer-motion";
 import { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import { SiTypescript, SiTailwindcss } from "react-icons/si";
 import { Badge } from "@/components/ui/badge";
+import { SiTypescript, SiTailwindcss, SiRedux, SiVite, SiShadcnui,SiSqlite} from "react-icons/si";
+import { FaReact, FaNodeJs, FaBootstrap } from "react-icons/fa";
+import { DiRuby } from "react-icons/di"
 
 const projects = [
   {
-    title: "Gala",
+    title: "ugliboats.com",
     description:
-      "Web application that lets a user save data on their favorite artists and their artworks. Created a ReactJS frontend with React-router-dom v6 to have seamless client-side navigation. Implemented Redux toolkit for state management and fetch calls to deliver better communication between components. Generated Ruby on Rails database with ActiveRecord and SQLite for an API with BCrypt for security.",
-    link: `${import.meta.env.BASE_URL}Gala.png`,
-    color: "#5196fd",
-    githubLink: "https://github.com/joshtho/Gala",
-    liveLink: "https://youtu.be/prBWNAV13sY",
-    stack: [{
-          name: "TypeScript",
-          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-        }]
-  },
-  {
-    title: "We Stay",
-    description:
-      "A vacation application where users can save their favorite short-term rentals and plan their trips. Built with ReactJS for a dynamic frontend experience and integrated with a backend API for data management.",
-    link: `${import.meta.env.BASE_URL}WeStay.png`,
-    color: "#8f89ff",
-    githubLink: "https://github.com/joshtho/WeStay",
-    liveLink: "https://youtu.be/nuQ-BWluMl4",
-    stack: []
-  },
-  {
-    title: "Ugli Boats",
-    description:
-      "Ugli Boats is a platform that allows users to explore and book boat trips. Built with a focus on user experience and seamless navigation. Note: Design was under full control of client",
+      "Freelance contract for a boat enthusiast site where I migrated content from a static HTML build to a dynamic React application. I also built a CMS from scratch for the owner to manage content from an Admin Panel. Implemented design with Tailwind CSS under instruction from the client to their prefrences.",
     link: `${import.meta.env.BASE_URL}Ugliboats.png`,
-    color: "#fff",
+    color: "#006400",
     githubLink: "https://github.com/joshtho/ugli-boats-v2",
     liveLink: "https://ugliboats.com",
-    stack: []
+    stack: [
+      {
+        name: "React",
+        icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
+      },
+      {
+        name: "Node.js",
+        icon: <FaNodeJs className="w-4 h-4 text-[#339933]" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+      },
+      {
+        name: "Vite",
+        icon: <SiVite className="w-4 h-4 text-[#563d7c]" />,
+      },
+      {
+        name: "Shadcn UI",
+        icon: <SiShadcnui className="w-4 h-4 text-[#090909]" />
+      }
+      
+    ]
   },
   {
     title: "Checkoutden.com",
@@ -52,20 +53,85 @@ const projects = [
     color: "#ed649e",
     githubLink: "https://github.com/joshtho/living-rivers",
     liveLink: "https://checkoutden.com",
-    stack: []
+    stack: [
+      {
+        name: "React",
+        icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+      },
+      {
+        name: "Vite",
+        icon: <SiVite className="w-4 h-4 text-[#563d7c]" />,
+      },
+    ]
+  },
+  {
+    title: "We Stay",
+    description:
+    "A vacation application where users can save their favorite short-term rentals and plan their trips. Built with ReactJS for a dynamic frontend experience and integrated with a backend API for data management.",
+    link: `${import.meta.env.BASE_URL}WeStay.png`,
+    color: "#8f89ff",
+    githubLink: "https://github.com/joshtho/WeStay",
+    liveLink: "https://youtu.be/nuQ-BWluMl4",
+    stack: [
+      {
+        name: "React",
+        icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
+      },
+      {
+        name: "Bootstrap",
+        icon: <FaBootstrap className="w-4 h-4 text-[#563d7c]" />,
+      },
+      {
+        name: "SQLite",
+        icon: <SiSqlite className="w-4 h-4 text-[#336791]" />
+      },
+      {
+          name: "Ruby on Rails",
+          icon: <DiRuby className="w-4 h-4 text-[#CC342D]" />,
+      },
+    ]
+  },
+  {
+    title: "Gala",
+    description:
+      "Web application that lets a user save data on their favorite artists and their artworks. Created a ReactJS frontend with React-router-dom v6 to have seamless client-side navigation. Implemented Redux toolkit for state management and fetch calls to deliver better communication between components. Generated Ruby on Rails database with ActiveRecord and SQLite for an API with BCrypt for security.",
+    link: `${import.meta.env.BASE_URL}Gala.png`,
+    color: "#5196fd",
+    githubLink: "https://github.com/joshtho/Gala",
+    liveLink: "https://youtu.be/prBWNAV13sY",
+    stack: [
+        
+        {
+        name: "React",
+        icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
+        },
+        {
+        name: "Bootstrap",
+        icon: <FaBootstrap className="w-4 h-4 text-[#563d7c]" />,
+        },
+        {
+          name: "Redux",
+          icon: <SiRedux className="w-4 h-4 text-[#563d7c]" />
+        },
+        {
+          name: "Ruby on Rails",
+          icon: <DiRuby className="w-4 h-4 text-[#CC342D]" />,
+        },
+        {
+        name: "SQLite",
+        icon: <SiSqlite className="w-4 h-4 text-[#336791]" />
+        }
+      ]
   },
 ];
-
-const skills = [
-        {
-          name: "TypeScript",
-          icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-        },
-        {
-          name: "Tailwind CSS",
-          icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-        },
-      ]
 
 export default function Projects() {
   const container = useRef(null);
@@ -120,7 +186,7 @@ export default function Projects() {
 
   return (
     <ReactLenis root>
-      <main className="bg-black" ref={container}>
+      <main className="bg-black pt-14 md:pt-0" ref={container}>
         <section className="text-white w-full bg-slate-950">
           {projects.map((project, i) => {
             const targetScale = 1 - (projects.length - i) * 0.05;
@@ -211,35 +277,36 @@ function Card({
 
           {/* Content section - full width on mobile, 45% on desktop */}
           <div className="w-full md:w-[45%] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
+                
             <div>
-              <div className="flex items-center gap-3 mb-4 md:mb-6">
+              <div className="flex items-center justify-self-start gap-3 mb-4 md:mb-6">
                 <div
-                  className="w-2 h-2 md:w-3 md:h-3 rounded-full"
+                  className="w-3 h-3 md:w-4 md:h-4 rounded-full flex-shrink-0"
                   style={{ backgroundColor: color }}
                 />
-                <div className="flex flex-wrap gap-2">
-        {stack.map((item, index) => (
-          <Badge
-            key={index}
-            variant="outline"
-            className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
-          >
-            <span className="transform group-hover/badge:scale-110 transition-transform duration-300">
-              {item.icon}
-            </span>
-            <span className="font-medium">{item.name}</span>
-          </Badge>
-        ))}
-      </div>
-                {/* <div className="h-[1px] w-12 md:w-20 bg-gray-600" /> */}
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white">
+                  {title}
+                </h2>
               </div>
 
-              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 md:mb-4">
-                {title}
-              </h2>
-              <p className="text-sm md:text-base text-gray-400 leading-relaxed line-clamp-3 md:line-clamp-none max-w-md">
+              <p className="text-sm md:text-base text-gray-400 leading-relaxed mb-4">
                 {description}
               </p>
+
+              <div className="flex flex-wrap gap-2">
+                {stack.map((item, index) => (
+                  <Badge
+                    key={index}
+                    variant="outline"
+                    className="group/badge relative bg-gray-800/50 hover:bg-gray-700/80 text-gray-100 border-gray-600 flex items-center gap-2 py-2 px-3 transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
+                  >
+                    <span className="transform group-hover/badge:scale-110 transition-transform duration-300">
+                      {item.icon}
+                    </span>
+                    <span className="font-medium">{item.name}</span>
+                  </Badge>
+                ))}
+              </div>
             </div>
 
             <div className="mt-4 md:mt-auto pt-4">
