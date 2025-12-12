@@ -8,7 +8,7 @@ Hello, I'm Joshua Keane Thompson and welcome to my **portfolio website**! This s
 ## Live Preview
 
 Check out the live preview of the portfolio website here:  
-[**Live Demo**](https://codervai.vercel.app/)
+[**Live Demo**](https://joshtho.github.io/portfolio/)
 
 ## Sections of the Portfolio
 
@@ -27,7 +27,7 @@ The portfolio website consists of the following sections:
 - **Frontend:** React.js with Vite
 - **Styling:** Tailwind CSS
 - **Icons:** React Icons
-- **Deployment:** Render
+- **Deployment:** Github pages
 
 ---
 
