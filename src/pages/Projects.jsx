@@ -47,7 +47,7 @@ const projects = [
   {
     title: "Checkoutden.com",
     description:
-      "Checkoutden an e-commerce platform that allows clients of mine to host a checkout page for their digital products and manage their sales efficiently. Note: Still in development.",
+      "Checkoutden is an e-commerce platform that allows users to host a checkout page for their digital products and manage their sales efficiently. Note: Still in development, will add page building features for the user soon.",
     src: "house.jpg",
     link: `${import.meta.env.BASE_URL}Checkoutden.png`,
     color: "#ed649e",
@@ -102,7 +102,7 @@ const projects = [
   {
     title: "Gala",
     description:
-      "Web application that lets a user save data on their favorite artists and their artworks. Created a ReactJS frontend with React-router-dom v6 to have seamless client-side navigation. Implemented Redux toolkit for state management and fetch calls to deliver better communication between components. Generated Ruby on Rails database with ActiveRecord and SQLite for an API with BCrypt for security.",
+      "Web application that lets a user save data on their favorite artists and their artworks. Created a ReactJS frontend with Redux toolkit for state management and API calls. Generated Ruby on Rails database with SQLite and BCrypt for security.",
     link: `${import.meta.env.BASE_URL}Gala.png`,
     color: "#5196fd",
     githubLink: "https://github.com/joshtho/Gala",
