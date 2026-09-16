@@ -19,7 +19,7 @@ const EducationSection = () => {
       year: "2022-2023",
       skills: ["JavaScript", "Ruby", "React", "Ruby on Rails"],
       description:
-        "Learned the fundamentals of full-stack web development, including front-end and back-end technologies, database management, and deployment strategies.",
+        "Learned the fundamentals of full-stack web development, including front-end and back-end technologies, database management, object oriented programming, and deployment strategies.",
     },
     {
       
