@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import EducationLoader from "@/components/ui/EducationLoader";
+import Starfield from "@/components/ui/Starfield";
 import {
   Calendar,
   BookOpen,
@@ -56,6 +57,11 @@ const EducationSection = () => {
 
   return (
     <section className="min-h-screen relative overflow-hidden py-40 bg-[#04081A]">
+      {/* Starry Background */}
+      <div className="absolute inset-0 z-0">
+        <Starfield starCount={150} meteorCount={8} />
+      </div>
+
       {/* Grid Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-grid-white/[0.05] bg-[length:50px_50px]" />

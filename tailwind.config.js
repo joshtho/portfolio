@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       animation: {
         meteor: "meteor 5s linear infinite",
+        twinkle: "twinkle 3s ease-in-out infinite",
       },
       keyframes: {
         meteor: {
@@ -20,6 +21,10 @@ module.exports = {
             transform: "rotate(215deg) translateX(-500px)",
             opacity: "0",
           },
+        },
+        twinkle: {
+          "0%, 100%": { opacity: "0.2" },
+          "50%": { opacity: "1" },
         },
       },
       borderRadius: {

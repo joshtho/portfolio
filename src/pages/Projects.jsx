@@ -6,8 +6,37 @@ import { Badge } from "@/components/ui/badge";
 import { SiTypescript, SiTailwindcss, SiRedux, SiVite, SiShadcnui,SiSqlite} from "react-icons/si";
 import { FaReact, FaNodeJs, FaBootstrap } from "react-icons/fa";
 import { DiRuby } from "react-icons/di"
+import GridBackdrop from "@/components/ui/GridBackdrop";
 
 const projects = [
+  {
+    title: "Checkoutden.com",
+    description:
+      "CheckoutDen helps digital creators turn more visitors into customers by pairing actionable marketing tips with a fully hosted, customizable checkout page. A built-in page builder makes it easy to design and launch without writing any code.",
+    src: "house.jpg",
+    link: `${import.meta.env.BASE_URL}Checkoutden.png`,
+    color: "#ed649e",
+    githubLink: "https://github.com/joshtho/living-rivers",
+    liveLink: "https://checkoutden.com",
+    stack: [
+      {
+        name: "React",
+        icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
+      },
+      {
+        name: "TypeScript",
+        icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
+      },
+      {
+        name: "Tailwind CSS",
+        icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
+      },
+      {
+        name: "Vite",
+        icon: <SiVite className="w-4 h-4 text-[#563d7c]" />,
+      },
+    ]
+  },
   {
     title: "ugliboats.com",
     description:
@@ -41,35 +70,7 @@ const projects = [
         name: "Shadcn UI",
         icon: <SiShadcnui className="w-4 h-4 text-[#090909]" />
       }
-      
-    ]
-  },
-  {
-    title: "Checkoutden.com",
-    description:
-      "Checkoutden is an e-commerce platform that allows users to host a checkout page for their digital products and manage their sales efficiently. Note: Still in development, will add page building features for the user soon.",
-    src: "house.jpg",
-    link: `${import.meta.env.BASE_URL}Checkoutden.png`,
-    color: "#ed649e",
-    githubLink: "https://github.com/joshtho/living-rivers",
-    liveLink: "https://checkoutden.com",
-    stack: [
-      {
-        name: "React",
-        icon: <FaReact className="w-4 h-4 text-[#61DAFB]" />,
-      },
-      {
-        name: "TypeScript",
-        icon: <SiTypescript className="w-4 h-4 text-[#3178C6]" />,
-      },
-      {
-        name: "Tailwind CSS",
-        icon: <SiTailwindcss className="w-4 h-4 text-[#38B2AC]" />,
-      },
-      {
-        name: "Vite",
-        icon: <SiVite className="w-4 h-4 text-[#563d7c]" />,
-      },
+
     ]
   },
   {
@@ -186,8 +187,11 @@ export default function Projects() {
 
   return (
     <ReactLenis root>
-      <main className="bg-black pt-14 md:pt-0" ref={container}>
-        <section className="text-white w-full bg-slate-950">
+      <main className="bg-black pt-14 md:pt-0 relative" ref={container}>
+        <div className="absolute inset-0">
+          <GridBackdrop />
+        </div>
+        <section className="text-white w-full">
           {projects.map((project, i) => {
             const targetScale = 1 - (projects.length - i) * 0.05;
             return (

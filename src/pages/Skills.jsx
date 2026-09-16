@@ -2,6 +2,7 @@ import React from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import IconCloudDemo from "@/components/globe";
+import GridBackdrop from "@/components/ui/GridBackdrop";
 import { Code2, ShieldCheck, Database, Layout, Cpu, Cloud } from "lucide-react";
 import {
   FaReact,
@@ -255,7 +256,9 @@ const SkillsSection = () => {
   return (
     <main className="pt-15 lg:pt-0 text-white min-h-screen bg-[#04081A] relative">
       {/* Grid Background */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-20 pointer-events-none"></div>
+      <div className="absolute inset-0">
+        <GridBackdrop />
+      </div>
 
       <section className="container mx-auto px-4 py-11 relative z-10">
         <div className="flex justify-center items-center ">

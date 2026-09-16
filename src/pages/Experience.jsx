@@ -1,5 +1,6 @@
 import React from "react";
 import { Code2, Activity, Cpu, Layers, Network, Binary } from "lucide-react";
+import Starfield from "@/components/ui/Starfield";
 
 const ExperienceCard = ({
   title,
@@ -74,26 +75,11 @@ const ExperienceSection = () => {
   return (
     <>
       <div className="min-h-screen bg-gradient-to-b relative overflow-hidden pt-32 pb-20">
-        {/* Animated gradient background */}
+        {/* Base color */}
         <div className="absolute inset-0 bg-[#04081A]" />
 
-        {/* Grid background */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(50,50,70,0.15)_1px,transparent_1px),linear-gradient(90deg,rgba(50,50,70,0.15)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]" />
-
-        {/* Animated particles */}
-        <div className="absolute inset-0">
-          {[...Array(20)].map((_, i) => (
-            <div
-              key={i}
-              className="absolute w-2 h-2 bg-blue-500/20 rounded-full animate-float"
-              style={{
-                top: `${Math.random() * 100}%`,
-                left: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 5}s`,
-              }}
-            />
-          ))}
-        </div>
+        {/* Starry Background */}
+        <Starfield starCount={150} meteorCount={8} />
 
         {/* Content container */}
         <div className="relative container mx-auto px-6 mt-10">
